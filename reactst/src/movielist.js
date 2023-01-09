@@ -40,14 +40,14 @@ const Mapi = () => {
             placeholder={"Enter Movie Name"}
             onChange={(e) => {
               handleInputText(e);
-            }} //e->event
+            }}
+            onKeyUp={(e) => handleInputEnter(e)} //e->event
           />
           <img
             className="image"
             src={gs}
             alt="Search"
             onClick={() => searchMovies(searchTerm)}
-            onKeyUp={(e) => handleInputEnter(e)}
           />
         </div>
       </div>
